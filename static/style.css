@@ -1,0 +1,10 @@
+body{
+    background:#f8f9fa;
+}
+
+.box{
+    min-height:150px;
+    border:1px solid #ccc;
+    padding:15px;
+    background:white;
+}
