@@ -9,6 +9,12 @@ document.getElementById("stopBtn");
 
 startBtn.onclick = async () => {
 
+    document.getElementById("status-dot").className =
+    "dot recording";
+
+    document.getElementById("status-text").innerText =
+    "Recording...";
+
     const stream =
     await navigator.mediaDevices
     .getUserMedia({audio:true});
@@ -29,6 +35,12 @@ startBtn.onclick = async () => {
 stopBtn.onclick = () => {
 
     mediaRecorder.stop();
+
+    document.getElementById("status-dot").className =
+    "dot stopped";
+
+    document.getElementById("status-text").innerText =
+    "Recording Stopped";
 
     mediaRecorder.onstop = async () => {
 
